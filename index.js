@@ -9,7 +9,7 @@ let data = JSON.parse(localStorage.getItem("products"));
 
 if (!data) {
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://webacademy.se/fakestore/");
+  xhr.open("GET", "https://webacademy.se/fakestore/");
   xhr.send();
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
