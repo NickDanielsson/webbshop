@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>varukorg</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="container">
+        <a href="index.html" class="btn btn-info btn-md">Hem</a>
+        <span class="navbar-brand">Varukorgen!</span>
+        <a href="cart.html" class="btn btn-info btn-md">
+          <span class="glyphicon glyphicon-shopping-cart"></span> Till varukorg
+          <span id="itemsincart"> 0</span>
+        </a>
+      </nav>
+    </nav>
+
+    <div class="container" id="container">
+      <div>
+        <h1>Din varukorg</h1>
+        <hr />
+      </div>
+      <div class="row" id="output">
+        <h1 class="header">Din varukorg är tom! Iväg och handla med dig!</h1>
+      </div>
+
+      <div class="card-footer text-center">
+        <h4 class="card-title" id="totalprice">Totalt pris:</h4>
+      </div>
+
+      <div class="col-12">
+        <h1>Leveransinformation</h1>
+        <hr class="mt-1" />
+      </div>
+      <form action="orderconfirmation.html" class="row g-3" id="form">
+        <div class="col-md-4">
+          <label for="validationname" class="form-label">Förnamn</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationname"
+            placeholder="Namn..."
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationlastname" class="form-label">Efternamn</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationlastname"
+            placeholder="Efternamn..."
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationmail" class="form-label">Email</label>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="validationmail"
+              placeholder="example@gmail.com..."
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationaddress" class="form-label">Adress</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationaddress"
+            placeholder="Vägen 34..."
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationcity" class="form-label">Ort</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationcity"
+            placeholder="Stockholm..."
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationzipcode" class="form-label">Postnr</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationzipcode"
+            placeholder="555 55..."
+            required
+          />
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="invalidCheck2"
+              required
+            />
+            <label class="form-check-label" for="invalidCheck2">
+              Bekräfta uppgifterna
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" id="submitbtn" type="submit">
+            Skicka beställning
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
